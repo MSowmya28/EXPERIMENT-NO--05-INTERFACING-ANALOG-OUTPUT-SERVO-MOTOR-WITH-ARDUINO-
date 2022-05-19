@@ -67,15 +67,32 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM :
+```
+#include<Servo.h>
+Servo s1;
+void setup()
+{
+  s1.attach(9);
+}
+void loop()
+{
+  for(int i=0;i<=180;i+=1)
+  {
+    s1.write(i);
+    delay(15);
+  }
+  for(int i=180;i>=0;i-=1)
+  {
+    s1.write(i);
+    delay(15);
+  }
+}
+```
+
+### OUTPUT:
+![output](./robo%20ex5.PNG)
+![output](./robo%20ex%205.1.PNG)
  
-
-
-
-
-
-
-
-
 
 ### RESULTS: 
 Arduino uno interfacing with servo motor is learned and angular position is controlled using PWM signal.
